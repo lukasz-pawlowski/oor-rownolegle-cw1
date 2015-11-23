@@ -1,0 +1,9 @@
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.exe.config
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.csprojResolveAssemblyReference.cache
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1_wielowatkowosc.Form1.resources
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1_wielowatkowosc.Properties.Resources.resources
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.csproj.GenerateResource.Cache
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.exe
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.pdb
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.exe
+c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.pdb
