@@ -7,3 +7,12 @@ c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\pr
 c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.pdb
 c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.exe
 c:\users\lukasz\documents\visual studio 2015\Projects\projekt1-wielowatkowosc\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.pdb
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.exe.config
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.exe
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.pdb
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.exe
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\bin\Debug\projekt1-wielowatkowosc.pdb
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.csprojResolveAssemblyReference.cache
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\obj\Debug\projekt1_wielowatkowosc.Form1.resources
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\obj\Debug\projekt1_wielowatkowosc.Properties.Resources.resources
+C:\Users\lukasz\Documents\Visual Studio 2015\Projects\oor-rownolegle-cw1\projekt1-wielowatkowosc\obj\Debug\projekt1-wielowatkowosc.csproj.GenerateResource.Cache

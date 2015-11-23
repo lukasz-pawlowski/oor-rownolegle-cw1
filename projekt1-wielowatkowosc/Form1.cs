@@ -25,8 +25,9 @@ namespace projekt1_wielowatkowosc
         delegate string GetLabelFibCallback();
 
 
-        Thread rwThread, fibThread, hashThread;
+        Thread rwThread, fibThread, hashThread, hashThread2;
         String richTextString;
+        String fibTextString;
 
         public Form1()
         {
@@ -46,26 +47,49 @@ namespace projekt1_wielowatkowosc
 
             hashThread = new Thread(calculateHash);
             hashThread.Start();
-            
+
+            hashThread2 = new Thread(calculateHash);
+            hashThread2.Start();
+
         }
 
         private void readWrite()
         {
             while(true)
             {
+                //oczekiwanie na watek fibonacci
+                fibThread.Join();
+
+                //podstawowe pobieranie wartosci
                 System.Threading.Thread.Sleep(1001);
                 this.GetText();
                 string s = richTextString;
+
+                this.GetLabelFib();
+                string t = fibTextString;
+      
+                string u = s + t;
+
                 //zapis
-                byte[] data = Encoding.UTF8.GetBytes(s);
+                byte[] data = Encoding.UTF8.GetBytes(u);
                 string path = @"c:\x.txt";
-                FileStream fs = new System.IO.FileStream(path, FileMode.Create);
-                fs.Write(data, 0, data.Length);
-                fs.Close();
+                FileStream fs = null;
+
+                try
+                {
+                    fs = new System.IO.FileStream(path, FileMode.Create);
+                    fs.Write(data, 0, data.Length);
+                }
+                catch (UnauthorizedAccessException)
+                {
+                   
+                }
+                finally
+                {
+                    if(fs != null) fs.Close();
+                }
 
                 //odczyt
-                //byte[] data;
-                //    string path = @"c:\x.txt";
                 if (File.Exists(path))
                 {
                     FileStream fso = new System.IO.FileStream(path, FileMode.Open);
@@ -102,12 +126,15 @@ namespace projekt1_wielowatkowosc
         {
             while (true)
             {
-                this.GetText();
-                String s = richTextString;
+                lock (this.labelHash)
+                {
+                    this.GetText();
+                    String s = richTextString;
 
-                System.Threading.Thread.Sleep(1000);
-                int h = s.GetHashCode();
-                this.SetLabelHash(h.ToString());
+                    System.Threading.Thread.Sleep(1000);
+                    int h = s.GetHashCode();
+                    this.SetLabelHash(h.ToString());
+                }
             }
         }
         private void SetText(string text)
@@ -127,9 +154,6 @@ namespace projekt1_wielowatkowosc
         }
         private void GetText()
         {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
             if (this.richTextBox.InvokeRequired)
             {
                 GetTextCallback d = new GetTextCallback(GetText);
@@ -144,9 +168,6 @@ namespace projekt1_wielowatkowosc
         }
         private void SetLabelFib(string text)
         {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
             if (this.richTextBox.InvokeRequired)
             {
                 SetLabelFibCallback d = new SetLabelFibCallback(SetLabelFib);
@@ -155,13 +176,11 @@ namespace projekt1_wielowatkowosc
             else
             {
                 this.labelFib.Text = text;
+                this.fibTextString = text;
             }
         }
         private string GetLabelFib()
         {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
             if (this.richTextBox.InvokeRequired)
             {
                 GetLabelFibCallback d = new GetLabelFibCallback(GetLabelFib);
@@ -176,9 +195,6 @@ namespace projekt1_wielowatkowosc
         }
         private void SetLabelHash(string text)
         {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
             if (this.richTextBox.InvokeRequired)
             {
                 SetLabelHashCallback d = new SetLabelHashCallback(SetLabelHash);
@@ -191,9 +207,6 @@ namespace projekt1_wielowatkowosc
         }
         private string GetLabelHash()
         {
-            // InvokeRequired required compares the thread ID of the
-            // calling thread to the thread ID of the creating thread.
-            // If these threads are different, it returns true.
             if (this.richTextBox.InvokeRequired)
             {
                 GetLabelHashCallback d = new GetLabelHashCallback(GetLabelHash);
